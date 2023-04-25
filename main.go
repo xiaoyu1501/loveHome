@@ -2,11 +2,14 @@ package main
 
 import (
 	"log"
+	_ "loveHome/controllers"
 	_ "loveHome/routers"
 	"net/http"
 	"strings"
 
 	"github.com/astaxie/beego/context"
+
+	_ "loveHome/models"
 
 	"github.com/astaxie/beego"
 )
@@ -29,5 +32,5 @@ func TransparentStatic(ctx *context.Context) {
 
 func main() {
 	ignoreStaticPath()
-	beego.Run()
+	beego.Run(":8899")
 }
