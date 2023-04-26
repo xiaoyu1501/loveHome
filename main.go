@@ -32,5 +32,6 @@ func TransparentStatic(ctx *context.Context) {
 
 func main() {
 	ignoreStaticPath()
+	//beego.BConfig.WebConfig.Session.SessionOn = true
 	beego.Run(":8899")
 }

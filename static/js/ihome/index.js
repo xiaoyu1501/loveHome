@@ -60,6 +60,7 @@ function goToSearchPage(th) {
 $(document).ready(function(){
     // 检查用户的登录状态
     $.get("/api/v1.0/session", function(resp) {
+        console.log()
         if ("0" == resp.errno) {
             $(".top-bar>.user-info>.user-name").html(resp.data.name);
             $(".top-bar>.user-info").show();
